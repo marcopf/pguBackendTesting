@@ -1,6 +1,48 @@
-<button (click)="login()">login</button>
-<button (click)="logout()">Logout</button>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <button class="btn m-3 btn-success" (click)="login()">login</button>
+            <button class="btn m-3 btn-danger" (click)="logout()">Logout</button>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-4">
+            <div class="input-group">
+                <input type="text" placeholder="Enter Url" class="form-control" name="" id="">
+                <button class="btn m-3 btn-success" (click)="api.testGet($event)">TEST GET</button>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="input-group">
+                <input type="text" placeholder="Enter Url" class="form-control" name="" id="">
+                <button class="btn m-3 btn-success" (click)="api.testDelete($event)">TEST DELETE</button>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="input-group">
+                <input type="text" placeholder="Enter Url" class="form-control" name="" id="">
+                <button class="btn m-3 btn-success" (click)="api.testPatch($event)">TEST PATCH</button>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-4">
+            <div class="input-group">
+                <input type="text" placeholder="Enter Url" class="form-control" name="" id="">
+                <button class="btn m-3 btn-success" (click)="api.testPut($event)">TEST PUT</button>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="input-group">
+                <input type="text" placeholder="Enter Url" class="form-control" name="" id="url">
+                <input type="text" placeholder="Enter Body" class="form-control" name="" id="body">
+                <button class="btn m-3 btn-success" (click)="api.testPost($event)">TEST POST</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-<button (click)="api.testGet('http://localhost:3000')">TEST GET</button>
-<button (click)="api.testPost('http://localhost:3000')">TEST POST</button>
-<button (click)="api.testDelete('http://localhost:3000')">TEST DELTE</button>
+<div class="display mt-5">
+
+</div>
+
